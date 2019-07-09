@@ -1,14 +1,48 @@
-<h1>Paper, rock, scissors</h1>
-<h2>Ready to play?</h2>
-<div>
-  <div class="newGame">Number of rounds in the game:<div id="rounds"></div></div>
-  <div class="newGame">Points so far:<div id="points"></div></div>
-</div>
-</div>
-<div>
-  <button id="paper">Paper</button>
-  <button id="rock">Rock</button>
-  <button id="scissors">Scissors</button>
-</div>
-<div id="output"></div>
-<div><button id="newGameButton">New game</button></div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paper rock scissors</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+
+		<h1>Paper, rock, scissors</h1>
+		<h2>Ready to play?</h2>
+		<div>
+			<div class="newGame">Number of rounds in the game:<div id="rounds"></div></div>
+			<div class="newGame">Points so far:<div id="points"></div></div>
+		</div>
+		</div>
+		<div>
+			<button id="paper" data-move="paper" class="player-move">Paper</button>
+			<button id="rock" data-move="rock" class="player-move">Rock</button>
+			<button id="scissors" data-move="scissors" class="player-move">Scissors</button>
+		</div>
+		<div id="output"></div>
+		<div><button id="newGameButton">New game</button></div>
+
+		<div class="overlay" id="modal-overlay">
+			<div class="modal" id="endOfGame">
+				<a href="#" class="close">x</a>
+				<div class="content" id="endOfGameOutput"></div>
+				<table id="scoreBoard">
+					<thead>
+						<tr>
+							<th>Round number</th>
+							<th>Player</th>
+							<th>Computer</th>
+							<th>Round score</th>
+							<th>Game score</th>
+						</tr>
+					</thead>
+					<tbody id="tableContent"></tbody>
+				</table>
+			</div>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
