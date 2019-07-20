@@ -72,11 +72,13 @@ button {
 .modal {
 	display: none;
 	background: #fff;
-	width: 200px;
+	max-width: 1200px;
+	margin: auto;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate3d(-50%, -50%, 0);
+	padding: 30px;
 
 	&.show {
 		display: block;
@@ -86,13 +88,32 @@ button {
 		position: absolute;
 		right: 0;
 		top: 0;
-		padding: 5px;
+		padding: 5px 10px;
 		color: #000;
 		text-decoration: none;
 	}
 
 	.content {
 		min-height: 30px;
-		padding: 5px 30px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+}
+
+#scoreBoard {
+	text-align: left;
+	border-collapse: collapse;
+
+	tr {
+		border-bottom: 2px solid lightgrey;	
+	}
+
+	th, td {
+		padding: 10px 20px 5px 0;
+		margin-bottom: 10px;
+
+		&:last-of-type {
+			padding-right: 0;
+		}
 	}
 }
